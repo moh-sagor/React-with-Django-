@@ -5,11 +5,12 @@ from rest_framework_simplejwt.views import (
 )
 
 from rest_framework.routers import DefaultRouter
-from BurgerApi.views import UserProfileViewSet
+from BurgerApi.views import UserProfileViewSet, OrderViewSet
 
 
 router = DefaultRouter()
 router.register("user", UserProfileViewSet)
+router.register("order", OrderViewSet, basename="order")
 
 
 urlpatterns = [
